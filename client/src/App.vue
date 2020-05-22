@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row text-gray-600 bg-resume-bg-color h-screen overflow-y-hidden">
+  <div class="flex flex-row font-custom text-gray-600 bg-resume-bg-color h-screen overflow-y-hidden">
     <!-- 1st sidebar -->
     <div class="w-12 bg-resume-sidebar-color">
       <sidebar-main />
@@ -41,7 +41,7 @@ import Navigation_Pills from './components/Navigation_Pills'
 
 export default {
   data:()=>{
-    return{
+    return{ 
     }
   },
   components: {

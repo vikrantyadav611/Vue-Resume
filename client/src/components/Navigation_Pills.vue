@@ -4,7 +4,7 @@
       <ul class="flex flex-row">
         <li v-for="(item,index) in pills" :key="item.id" @click="test_check(index)">
           <router-link :to="{name:item.path}">
-            <div :class="{pill_1:setId===index}" class=" px-8 py-2 cursor-pointer hover:text-white text-sm">
+            <div :class="{pill_1:setId===index}" class=" px-6 py-2 cursor-pointer hover:text-white text-sm">
             {{ item.name }}
             </div>
           </router-link>
@@ -57,6 +57,7 @@ export default {
 </script>
 <style>
 .pill_1{
+  color: white;
   background-color: #241b2f;
   border-bottom-width: 1px;
   border-color: #880088;

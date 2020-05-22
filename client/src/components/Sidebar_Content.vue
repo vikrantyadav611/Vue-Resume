@@ -60,6 +60,7 @@ export default {
 </script>
 <style>
 .pill{
+  color: white;
   background-color: rgba(44, 34, 63, var(--bg-opacity));
 }
 </style>
