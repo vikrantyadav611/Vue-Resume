@@ -56,7 +56,6 @@ export default {
       cached_import: Object.keys(Resume).filter(
         (item) => this.$route.name === item
       )[0],
-      count:0,
       content_color: color,
       introduction:
         Resume[
@@ -68,7 +67,6 @@ export default {
       this.$store.commit('set_introduction',this.introduction)
   },
   mounted() {
-    
     const element = document.querySelector("#intro");
     const element_1=document.querySelector('#details')
     const btn = styler(element);

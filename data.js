@@ -51,6 +51,8 @@ export const Resume = {
             JavaScript: {
                 js: 'JavaScript',
                 react: 'React JS',
+                vue: 'Vue Js',
+                vuex: 'Vuex',
                 redux: 'Redux',
                 saga: 'Redux-Saga',
                 pwa: 'Progressive Web App',
