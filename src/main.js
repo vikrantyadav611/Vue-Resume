@@ -7,6 +7,8 @@ import {router} from "./router";
 Vue.config.productionTip = false
 Vue.use(router)
 
+Vue.prototype.$temp = 0;
+
 new Vue({
   render: (h) => h(App),
   store,

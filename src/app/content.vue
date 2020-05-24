@@ -56,7 +56,7 @@ export default {
       cached_import: Object.keys(Resume).filter(
         (item) => this.$route.name === item
       )[0],
-      count: 0,
+      count:0,
       content_color: color,
       introduction:
         Resume[
@@ -105,14 +105,14 @@ export default {
     }
   },
   methods: {
-    find_index: function() {
-      // if (value >= 6) {
-      //   if (this.count >= 6) {
-      //     this.count = 0;
-      //   }
-      //   return this.count++;
-      // }
-      // return value;
+    find_index: function(value) {
+      if (value >= 6) {
+        if (this.$temp >= 6) {
+          this.$temp = 0;
+        }
+        return this.$temp++;
+      }
+      return value;
     }
   },
 };
