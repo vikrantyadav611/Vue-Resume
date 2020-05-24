@@ -58,7 +58,7 @@ export default {
              }
           });
     this.$store.commit('change_index',0) //set the default css to introduction section on mount for first time
-    // this.$router.push('introduction')   //set the default router link to introduction section onn mount for first time
+    this.$router.push('introduction')   //set the default router link to introduction section onn mount for first time
   },
   components: {
     SidebarMain:Sidebar_Main,
