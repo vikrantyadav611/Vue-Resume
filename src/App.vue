@@ -10,7 +10,7 @@
       <div class="flex flex-row justify-center">
         <p class="text-xs mb-1">{{title}}</p>
       </div>
-      <div class="flex-1 flex flex-row">
+      <div class="flex-1 flex flex-row">  
         <!-- Content's sidebar -->
         <div v-if="sm" class="w-48">
           <sidebar-content />
@@ -58,7 +58,7 @@ export default {
              }
           });
     this.$store.commit('change_index',0) //set the default css to introduction section on mount for first time
-    this.$router.push('introduction')   //set the default router link to introduction section onn mount for first time
+    // this.$router.push('introduction')   //set the default router link to introduction section onn mount for first time
   },
   components: {
     SidebarMain:Sidebar_Main,
