@@ -1,7 +1,7 @@
 <template>
-  <Fragment>
-    <div class="flex flex-col">
-      <p class="text-xs text-gray-400 pl-6 ">EXPLORER</p>
+  <Fragment>  
+    <div class="flex flex-col"> 
+      <p class="text-xs text-gray-400 pl-6 ">EXPLORER{{test}}</p>
       <div class="flex-1 mt-10 ">
         <ul>
         <li v-for="(item,index) in pills" :key="item.id" @click="test_check(index)">
@@ -21,7 +21,7 @@
 import { Fragment } from "vue-fragment";
 
 export default {
-  data: () => {
+  data() {
     return {
       pills: [
         {
@@ -45,14 +45,20 @@ export default {
           path:"contact"
         }
       ],
-      setId:''
+      setId:'',
     };
   },
   components: {
     Fragment,
   },
+  computed:{
+    test:function(){
+      return this.test_check(this.$store.state.tab_index)
+    }
+  },
   methods:{
     test_check(index){
+      this.$store.commit('change_index',index)
       this.setId=index
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <Fragment>
-    <div>
-      <ul class="flex flex-row">
+    <div>{{test}}
+      <ul class="flex flex-row overflow-x-auto">
         <li v-for="(item,index) in pills" :key="item.id" @click="test_check(index)">
           <router-link :to="{name:item.path}">
             <div :class="{pill_1:setId===index}" class=" px-6 py-2 cursor-pointer hover:text-white text-sm">
@@ -18,7 +18,7 @@
 import { Fragment } from "vue-fragment";
 
 export default {
-    data:()=>{
+    data(){
     return{
       pills: [
         {
@@ -42,14 +42,20 @@ export default {
           path:"contact"
         }
       ],
-      setId:''
+      setId:'',
     }
   },
   components: {
     Fragment,
   },
+  computed:{
+    test:function(){
+      return this.test_check(this.$store.state.tab_index)
+    }
+  },
   methods:{
     test_check(index){
+      this.$store.commit('change_index',index)
       this.setId=index
     }
   }

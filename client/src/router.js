@@ -1,11 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import introduction from './app/introduction'
-import experience from "./app/experience";
-import contact from "./app/contact";
-import playground from "./app/playground";
-import skills from "./app/skills";
-import projects from "./app/projects";
+import content from './app/content'
 
 
 Vue.use(Router)
@@ -14,32 +9,32 @@ export const router = new Router({
            {
              path: "/introduction",
              name: "introduction",
-             component: introduction,
+             component: content,
            },
            {
              path: "/experience",
              name: "experience",
-             component: experience,
+             component: content,
            },
            {
              path: "/contact",
              name: "contact",
-             component: contact,
+             component: content,
            },
            {
              path: "/playground",
              name: "playground",
-             component: playground,
+             component: content,
            },
            {
              path: "/skills",
              name: "skills",
-             component: skills,
+             component: content,
            },
            {
              path: "/projects",
              name: "projects",
-             component: projects,
+             component: content,
            },
          ],
          mode: "history",
