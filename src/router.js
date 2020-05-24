@@ -36,5 +36,6 @@ export const router = new Router({
              name: "projects",
              component: content,
            },
-         ]
+         ],
+         mode: "history",
        });
