@@ -1,5 +1,9 @@
 # client
 
+## Guide
+* To populate your information, one can simply find a file named as ```data.js```
+* Don't forget to add ```rel="noopener noreferrer"``` to achor tags while populating ```data.js```, for more information please visit [here](https://mathiasbynens.github.io/rel-noopener/).
+
 ## Project setup
 ```
 npm install

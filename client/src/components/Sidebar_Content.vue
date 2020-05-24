@@ -50,13 +50,15 @@ export default {
   },
   components: {
     Fragment,
-  },
+  },  
   computed:{
+    //detects the navigation pills tabs changes
     test:function(){
       return this.test_check(this.$store.state.tab_index)
     }
   },
   methods:{
+    // invokes the function as soon click event is invoked 
     test_check(index){
       this.$store.commit('change_index',index)
       this.setId=index

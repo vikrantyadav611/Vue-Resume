@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-row font-custom text-gray-600 bg-resume-bg-color h-screen overflow-hidden">
-    <!-- 1st sidebar -->
+    <!-- Main sidebar -->
     <div class="flex-none w-12 bg-resume-sidebar-color">
       <sidebar-main />
     </div>
@@ -11,7 +11,7 @@
         <p class="text-xs mb-1">{{title}}</p>
       </div>
       <div class="flex-1 flex flex-row">
-        <!-- 2nd sidebar -->
+        <!-- Content's sidebar -->
         <div v-if="sm" class="w-48">
           <sidebar-content />
         </div>
@@ -23,7 +23,7 @@
               <navigation-pills/>
             </div>
             <!-- dynamic content -->
-            <div class="content overflow-auto h-screen">
+            <div class="content overflow-scroll overflow-x-auto h-screen">
               <router-view :key="this.$route.path"></router-view>
             </div>
           </div>
@@ -48,6 +48,7 @@ export default {
     }
   },
   mounted(){
+    // event listener to detect the devices with resolution lesser than 640px
     window.addEventListener('resize', ()=>{
              if(window.innerWidth<=640){
                this.sm=false
@@ -56,6 +57,8 @@ export default {
                this.sm=true
              }
           });
+    this.$store.commit('change_index',0) //set the default css to introduction section on mount for first time
+    this.$router.push('introduction')   //set the default router link to introduction section onn mount for first time
   },
   components: {
     SidebarMain:Sidebar_Main,

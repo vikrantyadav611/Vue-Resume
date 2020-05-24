@@ -1,7 +1,7 @@
-export const Title = "Amit Mishra ~ Senior Web Developer";
+export const Title = "Vikrant Yadav ~ Junior Web Developer";
 
 export const Resume = {
-  introduction: `  { 
+         introduction: `  { 
         Introduction = () => { 
             Namaste: { 
                 Name: 'Vikrant Yadav', 
@@ -10,9 +10,8 @@ export const Resume = {
                 Gaymes: 'Bugladins'
             } 
         } 
-  }`
-,
-  experience: `  {
+  }`,
+         experience: `  {
         Experience = () => {
             Media.net: {
                 company: 'Directi(Media.net)',
@@ -37,7 +36,7 @@ export const Resume = {
         }
   }`,
 
-  skills: `  {
+         skills: `  {
         Skills = () => {
             Markup: {
                 html: 'Hyper Text Markup Language',
@@ -79,49 +78,49 @@ export const Resume = {
         }
   }`,
 
-  projects: `  {
+         projects: `  {
         Projects = () => {
             zeta: {
-                url: <a target='_blank' href='https://www.zeta.tech/zeta-spotlight/'>'https://www.zeta.tech/zeta-spotlight'</a>
+                url: <a target='_blank' href='https://www.zeta.tech/zeta-spotlight/' rel="noopener noreferrer">'https://www.zeta.tech/zeta-spotlight'</a>
             },
             Collegedunia: {
-                url: <a target='_blank' href='https://collegedunia.com/'>'https://collegedunia.com/'</a>
+                url: <a target='_blank' href='https://collegedunia.com/' rel="noopener noreferrer">'https://collegedunia.com/'</a>
             },
             lib4dev: {
-                url: <a target='_blank' href='http://www.lib4dev.in/'>'http://www.lib4dev.in/'</a>,
-                github: <a target='_blank' href='https://github.com/amitmishrg/lib4dev'>'https://github.com/amitmishrg/lib4dev'</a>
+                url: <a target='_blank' href='http://www.lib4dev.in/' rel="noopener noreferrer">'http://www.lib4dev.in/'</a>,
+                github: <a target='_blank' href='https://github.com/amitmishrg/lib4dev' rel="noopener noreferrer">'https://github.com/amitmishrg/lib4dev'</a>
             },
             Onlinemocks: {
-                url: <a target='_blank' href='http://onlinemocks.com/'>'http://onlinemocks.com/'</a>
+                url: <a target='_blank' href='http://onlinemocks.com/' rel="noopener noreferrer">'http://onlinemocks.com/'</a>
             }
         }
   }`,
 
-  playground: `  {
+         playground: `  {
         Playground = () => {   
             Code Resume: {
-                url: <a target='_blank' href='https://code-resume.herokuapp.com/'>'https://code-resume.herokuapp.com/'</a>,
-                github: <a target='_blank' href='https://github.com/amitmishrg/code-resume'>'https://github.com/amitmishrg/code-resume'</a>
+                url: <a target='_blank' href='https://code-resume.herokuapp.com/' rel="noopener noreferrer">'https://code-resume.herokuapp.com/'</a>,
+                github: <a target='_blank' href='https://github.com/amitmishrg/code-resume' rel="noopener noreferrer">'https://github.com/amitmishrg/code-resume'</a>
             },    
             offline News App: {
-                url: <a target='_blank' href='https://offline-news-app.herokuapp.com/'>'https://offline-news-app.herokuapp.com/'</a>,
-                github: <a target='_blank' href='https://github.com/amitmishrg/offline-news-app'>'https://github.com/amitmishrg/offline-news-app'</a>
+                url: <a target='_blank' href='https://offline-news-app.herokuapp.com/' rel="noopener noreferrer">'https://offline-news-app.herokuapp.com/'</a>,
+                github: <a target='_blank' href='https://github.com/amitmishrg/offline-news-app' rel="noopener noreferrer">'https://github.com/amitmishrg/offline-news-app'</a>
             },
             CSS Animation: {
-                url: <a target='_blank' href='https://codepen.io/amitmishrg/pen/vxoWVd'>'https://codepen.io/amitmishrg/pen/vxoWVd'</a>,
-                github: <a target='_blank' href='https://github.com/amitmishrg/CSS-Designs-and-Animation'>'https://github.com/amitmishrg/CSS-Designs-and-Animation'</a>
+                url: <a target='_blank' href='https://codepen.io/amitmishrg/pen/vxoWVd' rel="noopener noreferrer">'https://codepen.io/amitmishrg/pen/vxoWVd'</a>,
+                github: <a target='_blank' href='https://github.com/amitmishrg/CSS-Designs-and-Animation' rel="noopener noreferrer">'https://github.com/amitmishrg/CSS-Designs-and-Animation'</a>
             },
             Wrist Watch: {
-                url: <a target='_blank' href='https://codepen.io/amitmishrg/pen/evqeQp'>'https://codepen.io/amitmishrg/pen/evqeQp'</a>,
-                github: <a target='_blank' href='https://github.com/amitmishrg/wrist-watch'>'https://github.com/amitmishrg/wrist-watch'</a>
+                url: <a target='_blank' href='https://codepen.io/amitmishrg/pen/evqeQp' rel="noopener noreferrer">'https://codepen.io/amitmishrg/pen/evqeQp'</a>,
+                github: <a target='_blank' href='https://github.com/amitmishrg/wrist-watch' rel="noopener noreferrer">'https://github.com/amitmishrg/wrist-watch'</a>
             },
             Mini Portfolio: {
-                url: <a target='_blank' href='https://codepen.io/amitmishrg/pen/pLELXZ'>'https://codepen.io/amitmishrg/pen/pLELXZ'</a>
+                url: <a target='_blank' href='https://codepen.io/amitmishrg/pen/pLELXZ' rel="noopener noreferrer">'https://codepen.io/amitmishrg/pen/pLELXZ'</a>
             }
         }
   }`,
 
-  contact: `  {
+         contact: `  {
         Contact = () => {       
             {
                 email: 'amitmishra009v@gmail.com',
@@ -130,3 +129,10 @@ export const Resume = {
         }
   }`,
 };
+       
+export const SocialLinks = {
+         resume: "#",
+         linkedin: "https://www.linkedin.com/in/vikrant-yadav-905582135/",
+         twitter: "https://twitter.com/breadistaken",
+         github: "https://github.com/vikrantyadav611",
+       };

@@ -1,7 +1,9 @@
 <template>
   <Fragment>
     <ul class="flex flex-col mt-6 justify-center items-center">
-      <li class="cursor-pointer">
+      <!-- Resume -->
+      <a target="_blank" rel="noopener noreferrer">
+        <li class="cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           id="Layer_3"
@@ -58,7 +60,10 @@
           </g>
         </svg>
       </li>
-      <li class="mt-8 cursor-pointer">
+      </a>
+      <!-- Github -->
+      <a :href="links.github" target="_blank"  rel="noopener noreferrer">
+        <li class="mt-8 cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -87,7 +92,10 @@
           </g>
         </svg>
       </li>
-      <li class="mt-8 cursor-pointer">
+      </a>
+      <!-- Linkedin -->
+      <a :href="links.linkedin" target="_blank"  rel="noopener noreferrer">
+        <li class="mt-8 cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           id="Bold"
@@ -121,7 +129,10 @@
           </g>
         </svg>
       </li>
-      <li class="mt-8 cursor-pointer">
+      </a>
+      <!-- Twitter -->
+      <a :href="links.twitter" target="_blank"  rel="noopener noreferrer">
+        <li class="mt-8 cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -150,16 +161,21 @@
           </g>
         </svg>
       </li>
+      </a>
+      
     </ul>
   </Fragment>
 </template>
 
 <script>
 import { Fragment } from "vue-fragment";
+import {SocialLinks} from '../../data'
 
 export default {
   data: () => {
-    return {};
+    return {
+      links:SocialLinks
+    };
   },
   components: {
     Fragment,

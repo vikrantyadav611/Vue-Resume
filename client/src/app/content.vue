@@ -16,7 +16,8 @@
         </div>
       </div>
       <!-- Details -->
-      <div
+      <div id="details">
+        <div
         class="mt-3 text-sm relative"
         v-for="(item, index) in newdata"
         :key="item.id"
@@ -37,6 +38,7 @@
             </div>
           </div>
         </Fragment>
+      </div>
       </div>
     </div>
   </Fragment>
@@ -66,14 +68,23 @@ export default {
       this.$store.commit('set_introduction',this.introduction)
   },
   mounted() {
-    // apply slidedown animation on import text
+    
     const element = document.querySelector("#intro");
+    const element_1=document.querySelector('#details')
     const btn = styler(element);
+    const btn_1=styler(element_1)
+    // apply slidedown animation on import text
     tween({
       from: -15,
       to: 0,
-      duration: 400,
-    }).start((v) => btn.set("y", v));
+      duration: 300,
+    }).start((v) =>btn.set("y", v));
+    // apply slidedown animation on details text
+    tween({
+      from:15,
+      to: 0,
+      duration: 300,
+    }).start((v) =>btn_1.set("x", v));
   },
   components: {
     Fragment,
