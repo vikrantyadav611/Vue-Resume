@@ -105,14 +105,14 @@ export default {
     }
   },
   methods: {
-    find_index: function(value) {
-      if (value >= 6) {
-        if (this.count >= 6) {
-          this.count = 0;
-        }
-        return this.count++;
-      }
-      return value;
+    find_index: function() {
+      // if (value >= 6) {
+      //   if (this.count >= 6) {
+      //     this.count = 0;
+      //   }
+      //   return this.count++;
+      // }
+      // return value;
     }
   },
 };
