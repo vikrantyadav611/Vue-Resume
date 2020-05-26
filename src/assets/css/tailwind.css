@@ -4,6 +4,19 @@
 
 @tailwind utilities;
 
+.theme-light{
+  --bg-background-primary:#eaeaeb;
+  --bg-background-secondary:#fafafa;
+  --bg-background-ternary:#fafafa;
+
+}
+
+.theme-dark{
+  --bg-background-primary:#241b2f;
+  --bg-background-secondary:#262335;
+  --bg-background-ternary:#171520;
+}
+
 .content::-webkit-scrollbar {
   width: 5px;
 }

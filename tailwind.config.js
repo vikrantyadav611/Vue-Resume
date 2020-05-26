@@ -12,10 +12,20 @@ module.exports = {
       xl: "1280px",
     },
     colors: {
+      background: {
+        // primary: "#eaeaeb",
+        // secondary: "#fafafa"
+        // primary:#262335
+        // secondary:#241b2f
+        primary: "var(--bg-background-primary)",
+        secondary: "var(--bg-background-secondary)",
+        ternary: "var(--bg-background-ternary)",
+
+      },
       "resume-bg-color": "#241b2f",
       "resume-sidebar-color": "#171520",
-      "resume-pill-bg-color": "#2c223f",
-      "resume-text-color": "#807b6f",
+      // "resume-pill-bg-color": "#2c223f",
+      // "resume-text-color": "#807b6f",
       "resume-content-color": "#262335",
       transparent: "transparent",
       current: "currentColor",

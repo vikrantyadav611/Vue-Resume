@@ -6,13 +6,16 @@
         <ul>
         <li v-for="(item,index) in pills" :key="item.id" @click="test_check(index)">
           <router-link :to="{name:item.path}">
-            <div :class="{pill:setId===index}" class="pl-6 py-3 cursor-pointer pb-3 hover:text-white text-sm">
+            <div v-if="check_theme==='theme-dark'" :class="{pill_s_dark:setId===index}" class="pl-6 py-3 cursor-pointer pb-3 hover:text-white text-sm">
+            {{ item.name }}
+            </div>
+            <div v-if="check_theme==='theme-light'" :class="{pill_s_light:setId===index}" class="pl-6 py-3 cursor-pointer pb-3 hover:text-black text-sm">
             {{ item.name }}
             </div>
           </router-link>
         </li>
       </ul>
-      </div>
+      </div>  
     </div>
   </Fragment>
 </template>
@@ -55,6 +58,9 @@ export default {
     //detects the navigation pills tabs changes
     test:function(){
       return this.test_check(this.$store.state.tab_index)
+    },
+    check_theme:function(){
+      return this.$store.state.theme
     }
   },
   methods:{
@@ -67,8 +73,12 @@ export default {
 };
 </script>
 <style>
-.pill{
+.pill_s_dark{
   color: white;
-  background-color: rgba(44, 34, 63, var(--bg-opacity));
+  background-color: #2c223f;
+}
+.pill_s_light{
+  color: black;
+  background-color: #dbdbdc;
 }
 </style>

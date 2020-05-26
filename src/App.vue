@@ -1,9 +1,9 @@
 <template>
   <Fragment>
     <div
-      class="flex flex-row font-custom text-gray-600 bg-resume-bg-color h-screen overflow-hidden">
+      class="theme-light flex flex-row font-custom text-gray-600 bg-background-primary h-screen overflow-hidden" :class="theme">
       <!-- Main sidebar -->
-      <div class="flex-none w-12 bg-resume-sidebar-color">
+      <div class="flex-none w-12 bg-background-ternary">
         <sidebar-main />
       </div>
       <!-- content -->
@@ -18,7 +18,7 @@
             <sidebar-content />
           </div>  
           <!-- developer's info -->
-          <div class="flex-1 bg-resume-content-color overflow-hidden">
+          <div class="flex-1 bg-background-secondary overflow-hidden">
             <div class="flex flex-col">
               <!-- navigation pills -->
               <div class="h-10 overflow-auto ">
@@ -81,5 +81,10 @@ export default {
     SidebarContent: Sidebar_Content,
     NavigationPills: Navigation_Pills,
   },
+  computed:{
+    theme:function(){
+      return this.$store.state.theme
+    }
+  }
 };
 </script>
