@@ -1,32 +1,31 @@
 <template>
   <Fragment>
     <div
-      v-if="sm"
       class="flex flex-row font-custom text-gray-600 bg-resume-bg-color h-screen overflow-hidden">
       <!-- Main sidebar -->
       <div class="flex-none w-12 bg-resume-sidebar-color">
         <sidebar-main />
       </div>
       <!-- content -->
-      <div class="flex-1 flex flex-col">
+      <div class="flex-1 flex flex-col overflow-auto md:overflow-hidden lg:overflow-hidden">
         <!-- Title -->
-        <div class="flex flex-row justify-center">
+        <div class=" flex flex-row justify-center sm:overflow-hidden">
           <p class="text-xs mb-1">{{ title }}</p>
         </div>
-        <div class="flex-1 flex flex-row">
+        <div class="flex-1 flex flex-row overflow-hidden">
           <!-- Content's sidebar -->
           <div v-if="sm" class="w-48">
             <sidebar-content />
-          </div>
+          </div>  
           <!-- developer's info -->
-          <div class="flex-1 bg-resume-content-color">
+          <div class="flex-1 bg-resume-content-color overflow-hidden">
             <div class="flex flex-col">
               <!-- navigation pills -->
-              <div class="h-10 overflow-hidden ">
+              <div class="h-10 overflow-auto ">
                 <navigation-pills />
               </div>
               <!-- dynamic content -->
-              <div class="content overflow-scroll overflow-x-auto h-screen">
+              <div class="content overflow-scroll h-screen">
                 <router-view :key="this.$route.path"></router-view>
               </div>
             </div>
@@ -34,11 +33,11 @@
         </div>
       </div>
     </div>
-    <div v-if="!sm" class="flex flex-row font-custom text-gray-600 bg-resume-bg-color h-screen justify-center ">
+    <!-- <div v-if="!sm" class="flex flex-row font-custom text-gray-600 bg-resume-bg-color h-screen justify-center ">
       <div>
         <p>This app is not optimised for mobile devices yet, please prefer desktop over it</p>
       </div>
-    </div>
+    </div> -->
   </Fragment>
 </template>
 
@@ -61,6 +60,11 @@ export default {
   },
   mounted() {
     // event listener to detect the devices with resolution lesser than 640px
+    if(innerWidth<=640){
+      this.sm=false
+    }else{
+      this.sm=true;
+    }
     window.addEventListener("resize", () => {
       if (window.innerWidth <= 640) {
         this.sm = false;
