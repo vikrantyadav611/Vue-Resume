@@ -1,13 +1,12 @@
-export const Title = "Vikrant Yadav ~ Junior Web Developer";
+export const Title = "xyz ~ Junior Web Developer";
 
 export const Resume = {
          introduction: `  { 
         Introduction = () => { 
             Namaste: { 
-                Name: 'Vikrant Yadav', 
+                Name: 'xyz', 
                 Designation: 'Junior Web Developer' 
-                Hobbies: 'Biscord'
-                Gaymes: 'Bugladins'
+                Hobbies: 'abc'
             } 
         } 
   }`,
@@ -15,7 +14,7 @@ export const Resume = {
         Experience = () => {
             Media.net: {
                 company: 'Directi(Media.net)',
-                designation: 'Senior Web Developer',
+                designation: 'Junior Web Developer',
                 period: 'Feb 2017 to Present'
             },
             Onlinemocks: {
@@ -125,8 +124,8 @@ export const Resume = {
          contact: `  {
         Contact = () => {       
             {
-                email: 'amitmishra009v@gmail.com',
-                mobile: '8802100560'
+                email: 'xyz@gmail.com',
+                mobile: '880xxx0560'
             }
         }
   }`,
