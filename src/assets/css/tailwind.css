@@ -2,19 +2,22 @@
 
 @tailwind components;
 
-@tailwind utilities;
+@tailwind utilities;  
 
 .theme-light{
   --bg-background-primary:#eaeaeb;
   --bg-background-secondary:#fafafa;
   --bg-background-ternary:#fafafa;
+  --text-copy-primary:#7676a3;
+  --text-copy-secondary:#2d3748;
 
 }
-
 .theme-dark{
   --bg-background-primary:#241b2f;
   --bg-background-secondary:#262335;
   --bg-background-ternary:#171520;
+  --text-copy-primary:#718096;
+  --text-copy-secondary:#cbd5e0;
 }
 
 .content::-webkit-scrollbar {

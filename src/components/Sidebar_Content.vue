@@ -1,7 +1,7 @@
 <template>
   <Fragment>  
     <div class="flex flex-col"> 
-      <p class="text-xs text-gray-400 pl-6 ">EXPLORER{{test}}</p>
+      <p class="text-xs text-copy-secondary pl-6 ">EXPLORER{{test}}</p>
       <div class="flex-1 mt-10 ">
         <ul>
         <li v-for="(item,index) in pills" :key="item.id" @click="test_check(index)">

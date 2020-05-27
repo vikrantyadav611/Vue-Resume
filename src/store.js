@@ -26,7 +26,7 @@ export const store = new Vuex.Store({
            change_index(state, data) {
              state.tab_index = data;
            },
-           change_theme(state, data) {
+           change_theme(state, data) {  
              localStorage.setItem("theme", data);
              state.theme = data;
            },

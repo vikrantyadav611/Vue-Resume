@@ -1,7 +1,7 @@
 <template>
   <Fragment>
     <div
-      class="theme-light flex flex-row font-custom text-gray-600 bg-background-primary h-screen overflow-hidden" :class="theme">
+      class="flex flex-row font-custom text-copy-primary bg-background-primary h-screen overflow-hidden" :class="theme">
       <!-- Main sidebar -->
       <div class="flex-none w-12 bg-background-ternary">
         <sidebar-main />
@@ -33,11 +33,6 @@
         </div>
       </div>
     </div>
-    <!-- <div v-if="!sm" class="flex flex-row font-custom text-gray-600 bg-resume-bg-color h-screen justify-center ">
-      <div>
-        <p>This app is not optimised for mobile devices yet, please prefer desktop over it</p>
-      </div>
-    </div> -->
   </Fragment>
 </template>
 

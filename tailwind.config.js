@@ -22,11 +22,21 @@ module.exports = {
         ternary: "var(--bg-background-ternary)",
 
       },
-      "resume-bg-color": "#241b2f",
-      "resume-sidebar-color": "#171520",
+      copy: {
+        // primary: "#eaeaeb",
+        // secondary: "#fafafa"
+        // primary:#262335
+        // secondary:#241b2f
+        primary: "var(--text-copy-primary)",
+        secondary: "var(--text-copy-secondary)",
+        ternary: "var(--text-copy-ternary)",
+
+      },
+      // "resume-bg-color": "#241b2f",
+      // "resume-sidebar-color": "#171520",
       // "resume-pill-bg-color": "#2c223f",
-      // "resume-text-color": "#807b6f",
-      "resume-content-color": "#262335",
+      // "resume-text-color": "#807b6f",  
+      // "resume-content-color": "#262335",
       transparent: "transparent",
       current: "currentColor",
 
