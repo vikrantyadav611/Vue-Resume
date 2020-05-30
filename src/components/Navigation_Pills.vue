@@ -52,7 +52,9 @@ export default {
         }
       ],
       setId:'',
-      w_size:false
+      w_size:{
+        type:Boolean
+      }
     }
   },
   components: {
