@@ -1,13 +1,19 @@
 <template>
   <Fragment>
     <div>{{test}}
-      <ul class="flex flex-row overflow-x-auto">
+      <ul class="nav_pills flex flex-row overflow-x-auto">
         <li v-for="(item,index) in pills" :key="item.id" @click="test_check(index)">
           <router-link :to="{name:item.path}">
-            <div v-if="check_theme==='theme-dark'" :class="{pill_dark:setId===index}" class=" px-6 py-2 cursor-pointer hover:text-white text-sm">
+            <div v-if="(check_theme==='theme-dark')&& w_size" :class="{'pill_dark':(setId===index)}" class=" px-6 py-2 cursor-pointer hover:text-white text-sm">
             {{ item.name }}
             </div>
-            <div v-if="check_theme==='theme-light'" :class="{pill_light:setId===index}" class=" px-6 py-2 cursor-pointer hover:text-black text-sm">
+            <div v-if="check_theme==='theme-dark'&& !w_size" :class="{'pill_dark_1':(setId===index)}" class=" px-6 py-2 cursor-pointer hover:text-white text-sm">
+            {{ item.name }}
+            </div>
+            <div v-if="check_theme==='theme-light'&& w_size" :class="{pill_light:setId===index}" class=" px-6 py-2 cursor-pointer hover:text-black text-sm">
+            {{ item.name }}
+            </div>
+             <div v-if="check_theme==='theme-light'&& !w_size" :class="{pill_light_1:setId===index}" class=" px-6 py-2 cursor-pointer hover:text-black text-sm">
             {{ item.name }}
             </div>
           </router-link>
@@ -46,10 +52,20 @@ export default {
         }
       ],
       setId:'',
+      w_size:false
     }
   },
   components: {
     Fragment,
+  },
+  mounted(){
+     window.addEventListener("resize", () => {
+      if (window.innerWidth <= 972) {
+        this.w_size = false;
+      } else {
+        this.w_size = true;
+      }
+    });
   },
   computed:{
     test:function(){
@@ -74,11 +90,20 @@ export default {
   border-bottom-width: 1px;
   border-color: #880088;
 }
+.pill_dark_1{
+  color: white;
+  background-color: #241b2f;
+}
 
 .pill_light{
   color: black;
   background-color: #eaeaeb;
   border-bottom-width: 1px;
   border-color: #880088;
+}
+
+.pill_light_1{
+  color: black;
+  background-color: #eaeaeb;
 }
 </style>

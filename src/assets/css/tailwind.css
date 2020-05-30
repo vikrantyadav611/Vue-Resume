@@ -32,3 +32,17 @@
   background-color: #880088;
   outline: 1px solid slategrey;
 }
+
+.nav_pills::-webkit-scrollbar {
+  /* width: 1px; */
+  height: 2px;
+}
+ 
+.nav_pills::-webkit-scrollbar-track {
+  box-shadow: rgba(38, 35, 53, var(--bg-opacity));
+}
+ 
+.nav_pills::-webkit-scrollbar-thumb {
+  background-color: #978da3;
+  outline: 1px solid slategrey;
+}

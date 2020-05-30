@@ -21,7 +21,7 @@
           <div class="flex-1 bg-background-secondary overflow-hidden">
             <div class="flex flex-col">
               <!-- navigation pills -->
-              <div class="h-10 overflow-auto ">
+              <div class="h-10">
                 <navigation-pills />
               </div>
               <!-- dynamic content -->
